@@ -3,12 +3,14 @@ import random
 ################################ PAGE SETUP #########################
 # Set up the page
 st.set_page_config(
-    page_title="EV Adoption Tracker",
+    page_title="Superhero Name",
     layout="wide", # or wide
-    page_icon="🚗", # choose your favorite icon
+    page_icon="🦸‍♂️", # choose your favorite icon
     initial_sidebar_state="collapsed" # or expanded
 )
 ############################## APLICATION ############################
+# Predefined list of superhero catchphrases
+
 # Predefined list of superhero catchphrases
 catchphrases = [
     "Saving the world, one step at a time!",
@@ -19,12 +21,12 @@ catchphrases = [
 ]
 
 # Title
-st.title("Superhero Name Creator 🤹‍♂️✨")
+st.title("Superhero Name Creator 🦸‍♂️🦸‍♀️")
 
 # Inputs
 color = st.text_input("What's your favorite color?")
 animal = st.text_input("What's your favorite animal?")
-lucky_number = st.number_input("Enter a random lucky number:")
+lucky_number = st.number_input("Enter a random lucky number:", min_value=0, step=1)
 
 # Dropdown for superpower
 superpower = st.selectbox(
